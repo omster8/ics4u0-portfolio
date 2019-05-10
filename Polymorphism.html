@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body bgcolor="0016FF" a link="FFFFFF" vlink=red>
+<font face = "sans-serif"> <font size=+12> <font color="00EEFF"><center>Polymorphism Tutorial</font></font></font></center></body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="Portfolio About Me Page.html">About Me</a>
+  <a href="Personal_Projects.html">My Projects</a>
+  <div class="dropdown">
+    <button class="dropbtn">Tutorials 
+    </button>
+    <div class="dropdown-content">
+      <a href="OOP.html">Object-Oriented Programming</a>
+      <a href="Arrays_ArrayLists.html">Arrays/ArrayLists</a>
+      <a href="Searching_Sorting.html">Searching/Sorting</a>
+      <a href="Recursion.html">Recursion</a>
+      <a href="Polymorphism.html">Polymorphism</a>
+    </div>
+  </div> 
+  <a href="Bibliography.html">Bibliography</a>
+</div>
+
+<br>
+<font face = "sans-serif"> <font size=+2> <font color="FFFFFF">
+	Welcome to my last Java tutorial! In this tutorial we'll be learning <b>polymorphism</b>, which is the last of the "Big 3" of OOP (I'm assuming
+	you've already learned about encapsulation and inheritance in my OOP tutorial). I'll step-by-step go through the concept of polymorphism,
+	why it's useful, and where you'd want to use it. I'll also talk about a few things to be careful of when using polymorphism.<br><br>
+
+	In simplest terms, polymorphism is the idea of constructing a superclass object using a subclass constructor. To understand exactly what this means
+	and what it entails, we need to first learn about <b>upcasting</b> and <b>downcasting</b>. Let's say that we have two classes - Animal and Cat,
+	where the class Cat extends Animal. Java has a feature known as upcasting, which is when you create an object like this:<br><br>
+	<b>Animal a = new Cat (...);</b><br><br>
+	What Java does is that it automatically upcasts (similarly to how an int can be upcasted to a double) the object 'a' so that it is labelled
+	as an object of the Animal class. This means that although the object is technically of type Cat, the compiler treats it as if it is of type
+	Animal. In this case, the object 'a' can only call methods of the Animal class and overridden methods of the Cat class. This should pretty
+	much be review from my OOP tutorial. <br><br>
+	
+	Now what if you wanted to call methods of the Cat class that are not overridden through 'a'? Well, we have to use downcasting. We have to explicitly
+	cast the object 'a' to type Cat and only then can we access Cat class methods:<br><br>
+	<b>((Cat) a).someCatClassMethod ();</b><br><br>
+	If you do not explicitly downcast like this, Java will not find the given method in the Animal class, causing a compile error.<br><br>
+
+	Now, this should make it clear what I meant before when defining polymorphism: you declare an object of the superclass but instantiate it as an object
+	of a subclass. Polymorphism is when you have multiple subclasses that all have an overridden method shared with their superclass. When you 
+	create an object of that superclass but instantiate it as one of the subclasses and then call the overridden method, Java will automatically decide
+	which version of the overridden method to use. This is what makes polymorphism so powerful, it allows you to perform a slightly modified task automatically by calling only one method,
+	depending on the type of object. Going back to the Animal class example, let's say that the class has a method called makeSound which outputs the sound
+	that that animal makes. Let's also say that there are several subclasses of the Animal class, each with their own implementation of the makeSound method
+	(overridden methods). Now this shows the power of polymorphism:<br><br>
+	<b>Animal d = new Dog (...);<br>
+	// the makeSound method exists in the Animal class and in all of its subclasses<br>
+	d.makeSound (); // automatically calls the method inside the Dog class and outputs "bark"<br><br></b>
+	One last note on polymorphism is that it allows us to defy a few rules pertaining to interfaces and abstract classes. If you read my OOP tutorial,
+	you might recall that I said you cannot instantiate abstract classes and interfaces. Well, polymorphism allows you to do so (sort of). Basically,
+	you can create an object of an abstract class or interface but instantiate it as a subclass. Going back to the Animal example, if we created the Animal
+	class as an abstract class, we would still be able to use upcasting, downcasting, and polymorphism. In that particular case, it also makes sense
+	to make Animal abstract so we would not have to implement the makeSound method inside Animal (there isn't really a generic sound for all animals,
+	so we could declare this method as abstract).
+
+	One last thing to be careful of when upcasting and downcasting is that you must remember never to cast between subclasses of the same superclass.
+	For example, <br><br>
+	<b>Cat c = new Dog (...);</b><br><br>
+	is not allowed and causes a ClassCastException. In most cases, it makes sense (you can't have a Cat that is a Dog) but it is something to keep in
+	mind when casting between classes. <br><br>
+
+	Finally, here is an example of polymorphism in action. There is an class called Animal with a method called getBloodType() that returns the blood type
+	of that animal (as a String). There are also two subclasses of Animal - Mammal and Reptile - that have overridden versions of this same method. Therefore,
+	when you create an animal object but instantiate it as a Reptile or Mammal object, it calls the getBloodType() method inside the Reptile or Mammal
+	class, respectively. Here is a Github repository containing the .java files for this example:
+	<td><a href="https://github.com/omster8/polymorphism-example" target="_blank"><center><IMG STYLE="WIDTH:=200px; HEIGHT:75px" SRC="polymorphism_example.JPG"></center></a></td>
+</font></font></font>
+

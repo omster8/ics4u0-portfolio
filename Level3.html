@@ -1,0 +1,153 @@
+<html>
+<title>Don't Fear the OOP - Hard</title>
+<body bgcolor="red" a link="F400FF" vlink="0000FF">
+<font color="000000">
+<font face = "Century Gothic"> <font size=+8> <center> Don't Fear the OOP - Hard</font></font></center>
+<br>
+<br>
+<font face = "Calibri"><font size=+2>
+
+public class Village<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int pigs;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int wolves;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int houses;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int restaurants;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	public Village()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		house = 30;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		restaurant = 2;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>
+}<br><br>
+
+public class Revenge<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Village vaughan = new Village();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	vaughan.pigs = 20;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	vaughan.wolves = 40;<br>
+}<br><br>
+
+public class Mammal<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int legs;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int brains;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int eyes;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int houseNumber;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	String gender;	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	String name;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	String species;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	boolean fur;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	public Mammals()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Legs = 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		brains = 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		eyes = 2;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	public String yourName()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Return name;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>
+}<br><br>
+
+public class Pig extends Mammal<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	String monocleRim;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	String hatType;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int levelOfAgreeableness ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	double levelOfHunger;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int numberOfHousesBlownDown;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Mammal wolf; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		 
+	Public Pig()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		levelOfHunger = 100.00;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		numberOfHousesBlownDown = 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>
+}<br><br>
+
+public void setHungerLevel ()<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	hungerLevel *= 0.8;<br>
+}<br><br>
+
+public double getHungerLevel ()<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	return hungerLevel;<br>
+}<br><br>
+
+public void blownDownWolfHouse (Mammal wolf)<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	this.wolf = wolf;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	numberOfWolfHousesBlownDown++;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	System.out.println (“The pig has blown down house #” + wolf.houseNumber + “, which was owned by wolf “ + wolf.yourName () + “!”);<br>
+}<br><br>
+
+public class Pig extends Mammal<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	String monocleRim;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	String hatType;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int levelOfAgreeableness ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	double levelOfHunger;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	int numberOfHousesBlownDown;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Mammal wolf; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;		 
+	public Pig()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		levelOfHunger = 100.00;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		numberOfHousesBlownDown = 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	public void setHungerLevel ()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		hungerLevel *= 0.8;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public double getHungerLevel ()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		return hungerLevel;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public void blownDownWolfHouse (Mammal wolf)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		this.wolf = wolf;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		numberOfWolfHousesBlownDown++;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		System.out.println (“The pig has blown down house #” + wolf.houseNumber + “, which was owned by wolf “ + wolf.yourName () + “!”);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>
+}<br><br>
+
+public class PigGetsRevenge ()<br>
+{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	public void main (String[] args)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Village vaughan = new Village ();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			vaughan.houses = 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			vaughan.pigs = 20;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;			
+			vaughan.wolves = 40;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Pig julien = new Pig ();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			julien.monocleRim = “gold”;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			julien.houseNumber = 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			julien.gender = “male”;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			julien.species = “pig”;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			julien.name = “julien”;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			julien.fur = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			julien.hatType = “black top hat”;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			julien.levelOfAgreeableness = 3;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Mammal mort = new Mammal();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			mort.houseNumber = 12;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			mort.gender = “male”;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			mort.species = “wolf”;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			mort.name = “Mort”;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			mort.fur = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		julien.setHungerLevel ();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		System.out.println (julien.getHungerLevel());<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		julien.blowDownWolfHouse (mort);<br>&nbsp;&nbsp;&nbsp;&nbsp;
+	}<br>
+}
+
+</font><font>
+
+<center>
+<a href="MainMenu.html">Return to the home page</a>
+</center>

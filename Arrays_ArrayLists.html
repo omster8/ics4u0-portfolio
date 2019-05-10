@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body bgcolor="0016FF" a link="FFFFFF" vlink=red>
+<font face = "sans-serif"> <font size=+12> <font color="00EEFF"><center>Arrays and ArrayLists Tutorial</font></font></font></center></body>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="Portfolio About Me Page.html">About Me</a>
+  <a href="Personal_Projects.html">My Projects</a>
+  <div class="dropdown">
+    <button class="dropbtn">Tutorials 
+    </button>
+    <div class="dropdown-content">
+      <a href="OOP.html">Object-Oriented Programming</a>
+      <a href="Arrays_ArrayLists.html">Arrays/ArrayLists</a>
+      <a href="Searching_Sorting.html">Searching/Sorting</a>
+      <a href="Recursion.html">Recursion</a>
+      <a href="Polymorphism.html">Polymorphism</a>
+    </div>
+  </div> 
+  <a href="Bibliography.html">Bibliography</a>
+</div>
+
+<br>
+<font face = "sans-serif"> <font size=+2> <font color="FFFFFF">
+	Hello there! This page is an in-depth tutorial on arrays and ArrayLists in Java. I will be going step-by-step through the syntax, ideal usage,
+	tips when solving problems, and a bunch of examples to ensure that you are confident with using these important concepts in programming. Example
+	code can be found in the "My Projects" section of the website if you wish to tinker with the code and figure things out for yourself (which
+	is always a beneficial way to learn anything).
+	<br><br>
+	Okay, so let's start with a simple scenario. Imagine that you have 100 dogs (rather unrealistic but that's not the point) and you want to keep
+	track of their ages in a simple program. One way that you might approach this is by creating 100 integer variables to keep track of each dog's
+	name. Let that sink in for a second, you have 100 variables, each with their own name! Your code might look something like this:
+	<center><IMG STYLE="WIDTH:400px; HEIGHT:200px" SRC="Arrays1.JPG"></center>
+	Seems like a lot of work, doesn't it? Well, imagine you wanted to update your dogs' age variables next year. You would have to manually increment
+	each variable's value by 1:
+	<center><IMG STYLE="WIDTH:400px; HEIGHT:200px" SRC="Arrays2.JPG"></center>
+	Of course, this is extremely time-consuming for programmers, so this is where arrays come in. An <b>array</b> is essentially a way of storing multiple values of 
+	the same data type in a compact and efficient way. Each memory location in an array is called an <b>index</b>. In Java, arrays are zero-based, meaning that the first
+	index is 0. Finally, the actual values in an array are called <b>elements</b> and have to be of the same data type, which you specify when creating
+	the array. For example, the third element in an array would be at an index of 2. Now, going back to the same dog ages example, here's how simple
+	your code would be if you used a single array instead of 100 integer variables:
+	<center<<IMG STYLE="WIDTH:350px; HEIGHT:200px" SRC="Arrays3.JPG"></center>
+	Apart from the technique demonstrated above, there is also another way to create an array in Java:<br>
+	<center><b>int[] myArray = new int[100]</b></center>
+	where the number between the second pair of square bracket indicates the number of elements in the array (in this case 100 integers). The number of
+	elements in an array cannot change. For example, if the array length is set as 50 during declaration, you cannot add a 51st element to it.
+	When you create an array like this, each element in the array gets assigned an initial value. This value depends on the specified
+	data type of the array. Here are the corresponding initial values for a few common data types in Java:
+	<br><br>
+	<table>
+  		<tr>
+    			<th>Data Type</th>
+    			<th>Initial Value</th>
+  		</tr>
+ 		<tr>
+    			<td>int/long/short/byte</td>
+    			<td>0</td>
+ 		</tr>
+  		<tr>
+    			<td>double/float</td>
+    			<td>0.0</td>
+  		</tr>
+  		<tr>
+    			<td>boolean</td>
+    			<td>false</td>
+  		</tr>
+		<tr>
+    			<td>char</td>
+    			<td>'\u0000' (null character)</td>
+  		</tr>
+		<tr>
+    			<td>Objects such as Strings</td>
+    			<td>null</td>
+  		</tr>
+	</table>
+	<br>
+	Now that you're familiar with what arrays are and how to use them, we can talk a bit about the potential problems that may arise when using them.
+	One extremely common problem is an <b>ArrayIndexOutOfBoundsException</b>, and it happens if you try to access an element of an array at an index that does
+	not exist in the array. Thus, you can only access elements in an array from indices 0 to the array length - 1. For example, trying to access the 
+	element at negative indices or indices greater than or equal to the length of the array can cause this exception to be thrown by Java.
+	<center><IMG STYLE="WIDTH:450px; HEIGHT:200px" SRC="Arrays4.JPG"></center>
+	Another thing to note is that you do not necessarily have to instantiate an array when you create it, but you do have to instantiate it before
+	using it. For example, you can declare it first and then instantiate it later (but you can only use it after you instantiate it):<br><br>
+	<b>int[] myNums;<br>
+	   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+	   myNums = new int[5]</b><br><br>
+	Now let's take things one step further and talk about <b>multi-dimensional arrays</b>. Although the term might sound daunting at first, the core principle
+	behind multi-dimensional arrays isn't really too different from normal arrays. Starting off with 2-dimensional arrays, it might help to think of
+	them basically as a grid of values instead of a list. So while in an array you access each element with an index n (representing the n-th element
+	in the array), in a 2-d array you access each element with two indices r and c (representing the element in row r and column c). Another way to
+	think about 2-d arrays is that they really are arrays of arrays. For higher dimensions, the same principles apply. For example, 3-d arrays are
+	basically cubes of values with three indices per element. They can also be thought of as arrays of arrays of arrays (basically arrays of 2-d arrays).
+	You can think of multi-dimensional arrays using either description, whichever one helps you understand them better.
+	<center><IMG STYLE="WIDTH:400px; HEIGHT:200px" SRC="Arrays5.JPG"></center>
+	You create multi-dimensional arrays in Java essentially the same way as you create normal arrays. The number of square brackets indicates the
+	dimension, and the order is rows and then columns. For example, a 2-d array with 4 rows and 5 columns is created like: <br><br>
+	<b>int[][] myArr = new int[4][5];</b><br><br>
+
+	Another interesting type of array you can create in Java is called a <b>jagged array</b>. Jagged arrays are basically 2-dimensional arrays that are
+	not perfect grids, as in the number of columns per each row is not the same. If you like thinking about 2-d arrays as arrays of arrays, then you
+	can think of jagged arrays as arrays of arrays that do not have a fixed length. For example, here is what a jagged array might look like:
+	<center><IMG STYLE="WIDTH:315px; HEIGHT:220px" SRC="Arrays6.JPG"></center>
+	When processing jagged arrays, you have to be very careful because the number of columns is not constant in every row. This means that the counter variable in the inner
+	for loop that processes the columns must be bounded to that specific row's length, not just a pre-set number. The following example shows what
+	processing a normal 2-d array looks like versus processing a jagged array:
+	<center><IMG STYLE="WIDTH:315px; HEIGHT:225px" SRC="Arrays7.JPG"></center>
+	<center><IMG STYLE="WIDTH:315px; HEIGHT:225px" SRC="Arrays8.JPG"></center>
+	As seen in the image above, you can find the length array by using the length instance variable of the array object.<br><br>
+	Now that we're done learning the fundamental ideas behind arrays, we can tackle more advanced topics. We'll start off with an introduction to
+	for each loops. For each loops are essentially compact for loops created to easily traverse through an array's values. For example, say we were
+	trying to add up the values in an array. We could approach the task using either a for loop or for each loop, but the latter is quite evidently
+	more simple. Note that the code for this is in the My Projects section.
+	<center><IMG STYLE="WIDTH:400px; HEIGHT:225px" SRC="Arrays9.JPG"></center>
+	<center><IMG STYLE="WIDTH:400px; HEIGHT:225px" SRC="Arrays10.JPG"></center>
+	In a for each loop, also known as an enhanced for loop, you have a temporary variable of the array's data type inside the for loop header that
+	traverses through each element of the array. This allows you to access each value of the array. However, one extremely important thing to keep
+	in mind when using for each loops is that since they only allow access to the value of each element by using a temporary variable, you cannot
+	directly change elements in the array. For example, you cannot increment each element in an int array doing something like:<br><br>
+	<b>for (int i : myNums) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<br>
+	}</b><br><br>
+	This will not actually alter the elements in the array because you're just incrementing the temporary variable i. However, you can alter elements
+	in an array using a for each loop as long as they are not a primitive data type and they are not immutable. Therefore, arrays of String and primitive data types
+	cannot be altered using a for each loop. On the other hand, we can use class methods of objects to alter objects in an array using a for each loop.
+	For example, say we had an array of type Student, which is a class that we've implemented. This class has a method called setMark(int i) which sets
+	the mark instance variable for the Student object. If we wanted to give all our Students a 95, we could do this successfully:<br><br>
+	<b>Student[] myStudents = new Student[30];<br>
+	//Initialize Student objects in the array<br>
+	for (Student s : myStudents) {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s.setMark(95);<br>
+	}</b><br><br>
+	Why this successfully alters the objects in the array is a bit complicated, but it basically has to do with the fact that objects are copied by 
+	reference, so when the temporary Student s traverses through the array, it actually points to each Student object in the actual array, allowing
+	us to alter the actual array through s.<br><br>
+	This idea also applies to passing arrays as method parameters. Since arrays are objects, they are passed by reference as method parameters unlike
+	primitive data types. This means that the actual array gets altered whenever you pass the array into a method. For example,<br><br>
+	<b>int i = 8;<br>
+	someMethod(i);</b><br><br>
+	This would not change i as merely the integer value 8 is being passed into the method someMethod. However,<br><br>
+	<b>int[] arr = {3, 5, 1};<br>
+	someMethod(arr);</b><br><br>
+	This would actually be able to change arr, as any changes to the parameter array in someMethod are reflected in arr. This is because of the
+	fundamental property of passing by reference, as the actual array arr is being passed as a parameter, so it gets changed.<br><br>
+
+	Finally, we will discuss a few tips to keep in mind when using arrays. The first tip is that it is good practice to use integer constants for
+	array lengths. This provides enhanced convenience, because if the programmer wanted to suddenly change the length of the array all they would	
+	have to do is change the value of the constant. However, if they had not used a constant, they would have to manually go through the code and
+	modify it wherever the length of the array is being used. In addition, it is good to use a constant because array lengths cannot change, so
+	constants allow for security, ensuring that the length isn't changed even by accident.<br><br>
+	Another tip when using arrays is that it is a much better idea to visualize your code and even write some pseudo-code on a piece of paper
+	before actually coding the program. This allows you to be much more confident when actually coding, and increases your chances of finding
+	potential errors in your program before you actually code it, saving both time and effort.
+	<br><br>
+
+	If you've made it this far, hats off to you! Now, get ready, because we're about to dive into the realm of the <b>ArrayList</b>. Once again, let's 
+	start off with a basic scenario. Remember the array of dogs from the beginning of the tutorial? If not, let's say that you have 100 dogs and you 
+	want to store their ages somehow. We've already seen that it is optimal to use an int array instead of 100 int variables, but what if you get another
+	dog tomorrow? Since you cannot change the length of your array, you're kind of stuck. Luckily, this is where ArrayLists come to the rescue! On a very basic level,
+	ArrayLists are enhanced arrays with added functionality. The main reason that programmers use ArrayLists is that they are dynamic and more flexible
+	than arrays. This is because while arrays have a fixed number of elements, ArrayLists can store any number of elements (of course limited by the
+	memory on the device). But before we can actually use ArrayLists in Java, you must include the import statement <b>import java.util.ArrayList;</b> at the beginning of the program. 
+	You can create an ArrayList in Java using either of the following constructors: <br><br>
+	<b>ArrayList<Integer> myArrList = new ArrayList<Integer>();</b> &nbsp;&nbsp;&nbsp; <br>- OR -<br>
+	<b>ArrayList<Integer> myArrList = new ArrayList<Integer>(5);</b><br><br>
+	The first constructor sets the <b>capacity</b> of the ArrayList to the <b>default length of 10</b>, and this capacity doubles whenever this capacity is exceeded.
+	For example, when you add an eleventh element, the capacity of the ArrayList becomes 20. As for the second constructor, you can specify the initial
+	capacity of the ArrayList by the number between the brackets. For example, in the example above, the initial capacity of the ArrayList would be
+	5. This capacity would also double as needed. <br><br>
+	You might have noticed that when creating ArrayLists, you put the ArrayList's data type inside the "<" and ">" characters. Some of you might also
+	be wondering why we put Integer instead of just int inside these characters. This brings us to a very important point about ArrayLists. Unlike
+	arrays, ArrayLists can only store objects, not primitive data types. Therefore, you have to use <b>wrapper classes</b> instead of primitive data types:
+	<br><br>
+	<table>
+  		<tr>
+    			<th>Primitive Data Type</th>
+    			<th>Wrapper Class</th>
+  		</tr>
+ 		<tr>
+    			<td>char</td>
+    			<td>Character</td>
+ 		</tr>
+  		<tr>
+    			<td>byte</td>
+    			<td>Byte</td>
+  		</tr>
+  		<tr>
+    			<td>short</td>
+    			<td>Short</td>
+  		</tr>
+		<tr>
+    			<td>long</td>
+    			<td>Long</td>
+  		</tr>
+		<tr>
+    			<td>int</td>
+    			<td>Integer</td>
+  		</tr>
+		<tr>
+    			<td>boolean</td>
+    			<td>Boolean</td>
+  		</tr>
+		<tr>
+    			<td>float</td>
+    			<td>Float</td>
+  		</tr>
+		<tr>
+    			<td>double</td>
+    			<td>Double</td>
+  		</tr>
+	</table>
+	<br>
+	If you're working with a version of Java later than 5, however, this should not pose a significant problem because of something known as
+	<b>autoboxing</b>. Autoboxing is essentially when conversion between wrapper classes and primary data types occurs automatically. Because of this,
+	even though the type of an ArrayList may be Integer, you could still add int elements to it, and you could also access the elements as if they 
+	were ints. Therefore, the fact that ArrayLists can only store objects does not really make a difference when programming, because all you have to
+	remember is to set the data type of the Array to the wrapper class when declaring it. The following example shows the power of autoboxing:
+	<center><IMG STYLE="WIDTH:400px; HEIGHT:210px" SRC="ArrayLists1.JPG"></center>
+	The above example demonstrates how even though the ArrayList is technically of type Integer, you can treat it as if it is of type int. You might
+	be a bit confused by what .get and .add are doing, but don't worry because we'll now be learning a bit about ArrayList methods. Also, keep in mind that E stands for
+	the specified data type of the ArrayList. For example, if the ArrayList was declared as type Integer, E represents Integer.
+	<br><br>
+	<table>
+  		<tr>
+    			<th>ArrayList Method</th>
+			<th>Parameters</th>
+			<th>Return</th>
+    			<th>Explanation</th>
+  		</tr>
+ 		<tr>
+    			<td>boolean add(E obj)</td>
+    			<td>E obj: The object of type E to be added to the ArrayList.</td>
+			<td>boolean: Always returns true.</td>
+			<td>The add(E obj) method adds the object obj to the end of the ArrayList and returns true.</td>
+			
+ 		</tr>
+  		<tr>
+    			<td>E get(int i)</td>
+    			<td>int i: The desired index in the ArrayList.</td>
+			<td>E: The object of type E at the index i.</td>
+			<td>The get(int i) method returns the object of type E at the desired index within the ArrayList.</td>
+  		</tr>
+	</table>
+	One important thing to keep in mind when using ArrayLists is that they are zero-indexed, similar to arrays. This means that you can only access
+	elements in ArrayLists at indices from 0 to the number of elements in the ArrayList - 1 (more on the size of ArrayLists later). If you try
+	accessing negative indices or indices greater than or equal to the number of elements in the ArrayList, Java will throw an IndexOutOfBoundsException.<br><br>
+	Now that we've learned the basics of ArrayLists in Java, we can get into the more complicated topics. We'll start off with talking about some of
+	the other methods available for use in the ArrayList class. Here are a few common ones, along with explanations:
+	<table>
+  		<tr>
+    			<th>ArrayList Method</th>
+			<th>Parameters</th>
+			<th>Return</th>
+    			<th>Explanation</th>
+  		</tr>
+ 		<tr>
+    			<td>boolean isEmpty()</td>
+    			<td>None</td>
+			<td>boolean: Returns true if the ArrayList has no elements in it, otherwise returns false.</td>
+			<td>The isEmpty() method returns true if the ArrayList is empty (has no elements), otherwise false.</td>
+ 		</tr>
+  		<tr>
+    			<td>void add(int i, E obj)</td>
+    			<td>int i: The desired index in the ArrayList. E obj: The object that you want to put inside the ArrayList.</td>
+			<td>void</td>
+			<td>The overloaded add(int i, E obj) method adds the object of type E obj at the given index inside the ArrayList, shifting all elements to the right of that index one index to the right. 
+			    In this method, 0 <= i <= number of elements in ArrayList, because you can add elements to the end of the ArrayList (at one index after the last element in the ArrayList).</td>
+  		</tr>
+		<tr>
+    			<td>E set(int i, E obj)</td>
+    			<td>int i: The desired index where you want to set the object. E obj: The object that will be set in the ArrayList at the index i.</td>
+			<td>E: Returns the object of type E that was previously at the index i, before the replacement.</td>
+			<td>The set(int i, E obj) method sets the object at index i in the ArrayList to obj, returning the previous object at the index i.</td>		
+ 		</tr>
+		<tr>
+    			<td>E remove(int i)</td>
+    			<td>int i: The index of the element that is to be removed from the ArrayList.</td>
+			<td>E: The object of type E that was originally at the index i.</td>
+			<td>The remove(int i) method removes the element at the index i, and shifts the elements to the right of i one to the left. It then returns the object that was previously at the index i.</td>
+  		</tr>
+		<tr>
+    			<td>boolean contains(E obj)</td>
+    			<td>E obj: The object of type E that is being searched for in the ArrayList.</td>
+			<td>boolean: Returns true if the object was found in the ArrayList, otherwise false.</td>
+			<td>The contains(E obj) method uses the .equals() method (either the default Object one or an overridden one) to check if obj exists in the ArrayList.</td>	
+ 		</tr>
+		<tr>
+    			<td>int indexOf(E obj)</td>
+    			<td>E obj: The object of type E that is being searched in the ArrayList.</td>
+			<td>int : returns the index of obj in the ArrayList, -1 if obj was not found.</td>
+			<td>The indexOf(E obj) method uses the .equals() method (either the default Object one or an overriden one) to find the index of obj inside the ArrayList.</td>		
+ 		</tr>
+	</table>
+	There is one more important method in the ArrayList class called <b>int size()</b>, but I'll be explaining it here with more detail because this
+	one can be confusing. The method has no parameters, and returns an integer. This integer represents the size of the array (the number of elements
+	in the ArrayList). However, you have to be careful because when talking about ArrayLists, there is a length (maximum capacity of the ArrayList) and
+	there is a size (number of elements). When you use the .size() method, you are getting the number of elements in the array, not the maximum number
+	of elements.
+	<center><IMG STYLE="WIDTH:400px; HEIGHT:210px" SRC="ArrayLists2.JPG"></center>
+	At this point, the only topic we have left to cover for ArrayLists is the for each loop. For each loops
+	for ArrayLists follow the same principles as for each loops for arrays. Just a reminder, remember that you can only access values in the ArrayList,
+	and you cannot change elements of an ArrayList using a for each loop unless the data type is not immutable (in which case you can use methods of that
+	class to alter elements in the ArrayList). Here are examples of summing up the elements in an Integer ArrayList using a for each loop and for loop 
+	(these can be found in the My Projects section):
+	<center><IMG STYLE="WIDTH:525px; HEIGHT:210px" SRC="ArrayLists3.JPG"></center>
+	<center><IMG STYLE="WIDTH:525px; HEIGHT:210px" SRC="ArrayLists4.JPG"></center>
+	Finally, I'll discuss a few tips to keep in mind when using ArrayLists. One common mistake that I usually make is that
+	I forget that the remove() function of the ArrayList class actually returns the element that you just removed from the ArrayList. This can be very
+	convenient for scenarios such as dealing the top card from a deck of cards. All you have to do is return arrList.remove(0), which will not only
+	return the top card in the deck, but will also remove that card. Another extremely important point about ArrayLists is that they can only
+	store objects and wrapper classes but not primitive data types. Finally, one of the most common problems that arise when using ArrayLists is the
+	IndexOutOfBoundsException, which is thrown by Java whenever you try to access a non-existent element in an ArrayList. From personal experience,
+	this most often happens when traversing loops, where you accidently restrict the counter to be <= arrList.size() instead of < arrList.size()
+	(the valid indices of an ArrayList are from 0 to arrList.size() - 1).
+</font></font></font>
+

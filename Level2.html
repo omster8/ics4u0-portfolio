@@ -1,0 +1,103 @@
+<html>
+<title>Don't Fear the OOP - Intermediate</title>
+<body bgcolor="FFBD00" a link="F400FF" vlink="0000FF">
+<font color="000000">
+<font face = "Century Gothic"> <font size=+8> <center> Don't Fear the OOP - Intermediate</font></font></center>
+<br>
+<br>
+<font face = "Calibri"><font size=+2>
+	Here’s the main plot of Pig's Revenge in vaughan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		There’s a village named vaughan<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Vaughan has 32 houses<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Vaughan has 20 pigs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Vaughan has 40 wolves<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		There’s a new pig named Julien<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Julien has a gold-rimmed monocle<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Julien has a black top hat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Julien is a male<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Julien is a pig<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Julien lives in house number 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Julien has no fur<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Julien’s level of agreeableness from 1 to 10 is 3<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		There’s a new mammal named Mort, who’s a wolf<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Mort is a wolf<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Mort lives in house number 12<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Mort is a male<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Mort has fur<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Julien eats some food<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		He tells us how hungry he is<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		He blows down Mort’s house<br><br>
+	
+	Village<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Has a certain number of houses<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Has a certain number of pigs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Has a certain number of wolves<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Has a certain number of restaurants<br>
+	A typical Village would have<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Number of houses = 28<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Number of pigs = 24<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Number of wolves = 33<br><br>
+	
+	Pig’s Revenge on the Wolves<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Village Vaughan is a new Village<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Number of houses = 32<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Number of pigs = 24<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Number of wolves = 33<br><br>
+	
+	Mammals<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Have a certain number of legs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Have a certain number of brains<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Have a certain number of eyes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Have a certain house number<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Have a gender<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Have a species<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Either have fur or not<br>
+	A standard mammal would start with<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Four legs<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		One brain<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Two eyes<br>
+	When another mammal asks for your name<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		You respond with your name<br><br>
+
+	Pig extends the idea of mammal. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		A pig<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Has a monocle<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Has a hat<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Has a level of agreeableness<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Has a level of hunger<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			Has a certain number of houses he’s blown down<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		For a given pig<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			He will start at a level of max hunger.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			He will start the day without having blown any houses down.<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	setHungerLevel<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		hungerLevel gets reduced by 20%<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	getHungerLevel<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Tell the mammal who’s asking how hungry you are<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	blowDownWolfHouse (Mammal wolf)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Add one to the number of wolf houses this pig has blown down<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Print “Oh my gosh! {the specified house owned by the specified wolf} has been blown down.”<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+	Pigs extends the idea of Mammals. <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Every pig has a monocle.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Every pig has a hat.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Every pig has a level of hunger.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Every pig has a level of agreeableness.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Every pig will blow down a certain amount of houses.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	For a given pig,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		He will start at a level of max hunger.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		He will start the day without having blown any houses down.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	setHungerLevel<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Hunger level decreases by 20%.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	getHungerLevel<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Tell them how hungry you are.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	blowDownWolfHouse (name, houseNumber)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Add one to the number of wolf houses this pig has blown down<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		Print “Oh my gosh! {the specified house owned by the specified wolf} has been blown down."<br>
+</font></font>
+
+<center>
+<a href="MainMenu.html">Return to the home page</a>
+</center>
